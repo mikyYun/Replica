@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/** COMMON */
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+
+/** HEADER */
+header {
+  background-color: blue;
+}
+header .inner {
+  width: 1100px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: yellow;
+  position: relative;
+}
+header .logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 75px;
+}
+header .sub-menu {
+
+}
+header .sub-menu ul.menu {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  list-style-type: none;
+}
+header .sub-menu ul.menu li {
+  position: relative;
+}
+header .sub-menu ul.menu li::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .sub-menu ul.menu li:first-child:before {
+  display: none;
+}
+header .sub-menu ul.menu li a {
+  background-color: white;
+  font-size: 12px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+header .sub-menu .search {
+
+}
+header .sub-menu .search input {
+  
+}
+header .sub-menu .search .material-icons{
+  
+}
