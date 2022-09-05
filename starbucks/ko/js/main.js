@@ -14,3 +14,13 @@ searchInputEl.addEventListener("blur", () => {
   searchEl.classList.remove("focused");
   searchInputEl.setAttribute("placeholder", "");
 });
+
+const badgeEl = document.querySelector("header .badges");
+
+window.addEventListener("scroll", _.throttle(() => {
+  if (window.scrollY > 500) {
+    badgeEl.style.display = "none";
+  } else {
+    badgeEl.style.display = "block";
+  }
+}, 300));
