@@ -46,3 +46,30 @@ new Swiper(".notice-line .swiper-container", {
   loop: true,
   speed: 700
 });
+
+new Swiper(".promotion .swiper-container", {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  direction: "horizontal",
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: ".promotion .swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    prevEl: ".promotion .swiper-prev",
+    nextEl: ".promotion .swiper-next"
+  }
+});
+
+const promotionEl = document.querySelector(".promotion");
+const promotionToggleBtn = document.querySelector(".toggle-promotion");
+let isHidePromotion = false;
+promotionToggleBtn.addEventListener("click", () => {
+  isHidePromotion = !isHidePromotion;
+  isHidePromotion ? promotionEl.classList.add("hide") : promotionEl.classList.remove("hide");
+});
