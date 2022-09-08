@@ -535,6 +535,13 @@ header .badges .badge {
   height: 0;
   padding-top: 56.25%;
 }
+#player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .youtube .youtube__cover  {
   background-image: url("../images/video_cover_pattern.png");
   background-color: rgba(0, 0, 0, .3);
@@ -544,11 +551,21 @@ header .badges .badge {
   width: 100%;
   height: 100%;
 }
-
-#player {
-  width: 100%;
-  height: 100%;
+.youtube .inner {
+  height: 700px;
+}
+.youtube .floating {
   position: absolute;
-  top: 0;
+}
+.youtube .floating1 {
+  top: 50px;
   left: 0;
+}
+.youtube .floating2 {
+  top: 350px;
+  left: 150px;
+}
+.youtube .floating3 {
+  bottom: -200px;
+  right: 0;
 }

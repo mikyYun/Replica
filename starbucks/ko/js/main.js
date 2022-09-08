@@ -73,3 +73,20 @@ promotionToggleBtn.addEventListener("click", () => {
   isHidePromotion = !isHidePromotion;
   isHidePromotion ? promotionEl.classList.add("hide") : promotionEl.classList.remove("hide");
 });
+
+function floatingObj(selector, delay, size) {
+  gsap.to(selector, random(1.5, 2.5), {
+    y: size,
+    repeat: -1,
+    yoyo: true,
+    ease: Power1.easeInOut,
+    delay: random(0, delay)
+  });
+}
+floatingObj(".floating1", 1, 15)
+floatingObj(".floating2", .5, 15)
+floatingObj(".floating3", 1.5, 20)
+
+function random(min, max) {
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+}
