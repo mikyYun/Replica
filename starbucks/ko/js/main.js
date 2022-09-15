@@ -17,6 +17,12 @@ searchInputEl.addEventListener("blur", () => {
 
 const badgeEl = document.querySelector("header .badges");
 
+const toTopEl = document.querySelector("#to-top");
+toTopEl.addEventListener("click", () => {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  })
+})
 window.addEventListener("scroll", _.throttle(() => {
   if (window.scrollY > 500) {
     /** USE gsap */
@@ -24,13 +30,23 @@ window.addEventListener("scroll", _.throttle(() => {
       opacity: 0,
       display: "none"
     });
-  } else {
+    /** SHOW BUTTON */
+    gsap.to(toTopEl, .2, {
+      x: 0
+    })
+    } else {
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: "block"
     });
+    /** HIDE BUTTON */
+    gsap.to(toTopEl, .2, {
+      x: 100
+    })
   }
 }, 300));
+
+
 
 const fadeEls = document.querySelectorAll(".visual .fade-in");
 fadeEls.forEach((fadeEl, index) => {
@@ -66,6 +82,17 @@ new Swiper(".promotion .swiper-container", {
   }
 });
 
+new Swiper(".awards .swiper-container", {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: ".awards .swiper-prev",
+    nextEl: ".awards .swiper-next"
+  }
+})
+
 const promotionEl = document.querySelector(".promotion");
 const promotionToggleBtn = document.querySelector(".toggle-promotion");
 let isHidePromotion = false;
@@ -90,3 +117,17 @@ floatingObj(".floating3", 1.5, 20)
 function random(min, max) {
   return parseFloat((Math.random() * (max - min) + min).toFixed(2))
 }
+
+const spyEls =  document.querySelectorAll("section.scroll-spy")
+spyEls.forEach(el => {
+  new ScrollMagic
+    .Scene({
+      triggerElement: el,
+      triggerHook: .8
+    })
+    .setClassToggle(el, "show")
+    .addTo(new ScrollMagic.Controller());
+})
+
+const thisYear = document.querySelector(".this-year");
+thisYear.textContent = new Date().getFullYear();
