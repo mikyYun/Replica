@@ -1,3 +1,2 @@
 # Starbucks Korea
-
-![Alt Text](./starbucks.gif)
+![Show Starbucks Korea](_docs/starbucks.gif)
