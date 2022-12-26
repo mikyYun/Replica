@@ -49,20 +49,9 @@ nav .main_menu_container .menu_container {
 
 /* HEADER */
 /* THUMBNAIL */
-header .thumbnail_container {
-
-  /* width: 100%; */
-}
-
 header .thumbnail_conatiner .thumbnail_image img {
+  display: block;
   width: 100%;
 }
 
 /* MAIN */
-main {
-  /* width: 100%; */
-  height: 100vh;
-  background-color: blue;
-  /* margin-top: 90px; */
-  
-}
