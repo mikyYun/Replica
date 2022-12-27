@@ -20,18 +20,12 @@ button {
 
 html {
   font-size: 16px;
-  color: white;
+  color: #383838;
 }
 
 body {
   position: relative;
-  /* width: 100vw; */
 }
-/* 
-header {
-  position: fixed;
-  z-index: 1;
-} */
 
 /* NAV */
 nav {
@@ -55,3 +49,32 @@ header .thumbnail_conatiner .thumbnail_image img {
 }
 
 /* MAIN */
+main .container {
+  margin: 0 auto;
+}
+main .about_container {
+  width: 85%;
+  padding: 50px 0;
+}
+
+main .about_container .about_detail {
+  margin-top: 1rem;
+
+  /* margin: 1rem 0; */
+}
+main .about_container button.book {
+  padding: 10px;
+  width: 120px;
+  border: none;
+  background-color: #000066;
+  color: #ffffff;
+  transition: background-color .3s ease-in-out;
+  /* margin: 1rem 0; */
+  margin-top: 1rem;
+}
+main .about_container button.book:hover {
+  background-color: #5d5db1;
+}
+
+
+/* f8f8f8 */
