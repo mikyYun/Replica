@@ -6,11 +6,11 @@
 /* GLOBAL a TAG */
 a {
   text-decoration: none;
-  color: #ffffff;
+  /* color: #ffffff; */
   transition: color .3s ease-in-out;
 }
 a:hover {
-  color: #5d5db1;
+  /* color: #5d5db1; */
 }
 
 /* GLOBAL button TAG */
@@ -42,7 +42,13 @@ nav {
 }
 
 nav .main_menu_container .menu_container {
-  padding: .5rem;
+  /* font-size: 3rem; */
+  /* padding: .5rem; */
+  /* color: #ffffff; */
+  /* transition: color .3s ease-in-out; */
+}
+nav .main_menu_container .menu_container ul.menu_lists li.menu {
+  color: white;
 }
 
 @media screen and (max-width: 636px) {
