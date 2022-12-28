@@ -18,6 +18,10 @@ button {
 
 }
 
+li {
+  list-style: none;
+}
+
 html {
   font-size: 16px;
   color: #383838;
@@ -50,15 +54,36 @@ nav .menu_container ul.menu_lists {
   justify-content: center;
   align-items: center;
 }
-nav .menu_container li  {
-  list-style: none;
+nav .menu_container li.menu:hover  {
+  color: #5d5db1;
+}
+/* nav .menu_container li  { */
+  nav .menu_container p.menu_name  {
   display: inline-block;
   padding: 1rem;
   transition: color .3s ease-in-out;
   cursor: default;
 }
-nav .menu_container li:hover  {
+nav .menu_container li.menu:hover .menu_contents_container {
+  display: block;
+  /* position: fixed; */
+}
+nav .menu_container li.menu .menu_contents_container ul.inner_contents li {
+  padding: 10px 50px;
+}
+nav .menu_container li.menu .menu_contents_container ul.inner_contents li:hover {
   color: #5d5db1;
+}
+nav .menu_container li.menu .menu_contents_container.hide  {
+  display: none;
+}
+nav .menu_container li.menu .menu_contents_container  {
+  position: fixed;
+  top: 90px;
+  color: white;
+  background-color: #000066;
+  padding: 1rem 0;
+  cursor: default;
 }
 
 @media screen and (max-width: 1495px) {
