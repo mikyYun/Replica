@@ -83,34 +83,6 @@ nav .menu_container li.menu .menu_contents_container  {
   padding: 1rem 0;
   cursor: default;
 }
-/* NAV ICONS */
-nav .icons_container {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  /* position: relative; */
-}
-nav .icons_container img.menu_icon {
-  width: 50px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: height 1s;
-}
-nav .icons_container img.menu_icon:hover {
-  height: 0;
-  /* width: 0; */
-  transition: height 1s;
-  top: 50px;
-}
-
-
-nav .icons_container img#close {
-  /* color: white; */
-  /* background-color: white; */
-  /* display: none; */
-}
 
 .box {
   border-radius: 2px;
