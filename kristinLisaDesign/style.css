@@ -68,6 +68,7 @@ nav .menu_container li.menu:hover  {
 nav .menu_container li.menu:hover .menu_contents_container {
   display: block;
 }
+
 nav .menu_container li.menu .menu_contents_container ul.inner_contents li {
   padding: 10px 50px;
 }
@@ -84,11 +85,18 @@ nav .menu_container li.menu .menu_contents_container  {
   cursor: default;
 }
 
+nav .menu_container.show ul.menu_lists li {
+  background-color: #000066
+}
+
+
 .box {
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  z-index: 10;
+  display: none;
   border-radius: 2px;
-  /* position: absolute; */
-  /* top: 45px; */
-  /* right: 80px; */
   float: right;
   transform: translate(-50%, -50%);
   box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
@@ -96,8 +104,8 @@ nav .menu_container li.menu .menu_contents_container  {
 
 .btn {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  /* top: 50%; */
+  /* left: 50%; */
   transform: translate(-50%, -50%);
   width: 50px;
   cursor: pointer;
@@ -223,15 +231,42 @@ span + span {
   }
 }
 @media screen and (max-width: 1305px) {
-  nav {
-    /* color: red; */
-    /* font-size: .5rem; */
-  }
   nav .menu_container {
-    display: none;
+    /* display: none; */
+    visibility: hidden;
+    width: 0;
+    transition: width .5s ease-in-out;
   }
   nav .icons_container {
   display: block;
+  }
+  .box {
+    display: block;
+  }
+  nav .menu_container.show .menu_lists  {
+    display: block;
+  }
+  nav .menu_container.show  {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    transition-delay: .4s;
+    /* transition: width .5s ease-in-out; */
+  }
+  nav .menu_container.show li.menu .menu_contents_container {
+    display: none;
+    position: initial;
+  }
+  nav .menu_container li.menu .menu_contents_container.show  {
+    display: block;
+  }
+  nav .menu_container li.menu .menu_contents_container.show .inner_contents  {
+    background-color: #1c1c86;
+  }
+  nav .menu_container li.menu .menu_contents_container.show .inner_contents li  {
+    background-color: inherit;
   }
 }
 
