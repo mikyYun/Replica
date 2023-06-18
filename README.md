@@ -1,4 +1,4 @@
-# Mimik
+# Replica
 ## This repo is for practice and improve frontend skills 
 
 ## 1. Starbucks Korea
